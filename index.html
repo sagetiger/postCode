@@ -36,6 +36,10 @@
         window.AndroidBridge.callBackHandler(zoneCode, jibunAddress, roadAddress);
     }
 
+    function postMessageToAOS(postData) {
+        window.AndroidBridge.callBackHandler(postData);
+    }
+
     var element_layer = document.getElementById('layer');
     function execDaumPostcode() {
       new daum.Postcode({
@@ -53,10 +57,10 @@
               jibunAddress : jibunAddress,
               zonecode : data.zonecode
           };
-//          window.postMessageToiOS(postData);
-// 	  window.postMessageToAOS(data.zonecode, data.jibunAddress, data.roadAddress);
-	  window.AndroidBridge.callBackHandler(data.zonecode, data.roadAddress);
-// 	  window.AndroidBridge.callBackHandler(data.zonecode + ", " + data.roadAddress);
+//        window.postMessageToiOS(postData);
+	  window.postMessageToAOS(postData);
+// 	  window.AndroidBridge.callBackHandler(data.zonecode, data.roadAddress); // 동작
+// 	  window.AndroidBridge.callBackHandler(data.zonecode + ", " + data.roadAddress); // 동작
         },
         width : '100%',
         height : '100%'
