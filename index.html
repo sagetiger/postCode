@@ -32,8 +32,8 @@
         window.webkit.messageHandlers.callBackHandler.postMessage(postData);
     }
     
-    function postMessageToAOS(postData) {
-        window.AndroidBridge.callBackHandler(postData);
+    function postMessageToAOS(zoneCode, jibunAddress, roadAddress) {
+        window.AndroidBridge.callBackHandler(zoneCode, jibunAddress, roadAddress);
     }
 
     var element_layer = document.getElementById('layer');
