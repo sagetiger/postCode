@@ -58,8 +58,8 @@
               zonecode : data.zonecode
           };
 //        window.postMessageToiOS(postData);
-	  window.postMessageToAOS(postData);
-// 	  window.AndroidBridge.callBackHandler(data.zonecode, data.roadAddress); // 동작
+// 	  window.postMessageToAOS(postData); // AOS에서 Map이나 Any 받지 못함, 안됨
+	  window.AndroidBridge.callBackHandler(data.zonecode, data.roadAddress); // 동작
 // 	  window.AndroidBridge.callBackHandler(data.zonecode + ", " + data.roadAddress); // 동작
         },
         width : '100%',
